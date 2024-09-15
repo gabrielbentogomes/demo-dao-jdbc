@@ -12,10 +12,9 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		Department obj = new Department(1, "Books");
-		Seller seller = new Seller(9, "Nelio Pink","nelio@gmail.com", new Date(), 2000.0, obj);
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		System.out.println(obj);
+		Seller seller = sellerDao.findById(3);
+
 		System.out.println(seller);
 	}
 
